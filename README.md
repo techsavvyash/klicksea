@@ -2,11 +2,11 @@
 
 A native macOS 15+ menu-bar companion: capture the display under your pointer, ask a question aloud, and hear the answer. SwiftUI, ScreenCaptureKit, Speech, and AVFoundation; no Python, Node bridge, server, or third-party app libraries.
 
-Website: [klicksea-web.vercel.app](https://klicksea-web.vercel.app) · Docs: [klicksea-docs.vercel.app](https://klicksea-docs.vercel.app) · [Working demo](https://klicksea-web.vercel.app/#demo)
+Website: [klicksea.techsavvyash.dev](https://klicksea.techsavvyash.dev) · Docs: [docs.klicksea.techsavvyash.dev](https://docs.klicksea.techsavvyash.dev) · [Working demo](https://klicksea.techsavvyash.dev/#demo)
 
 ## Install the preview
 
-[Download the universal preview DMG](https://github.com/techsavvyash/klicksea/releases/download/v0.1.0-preview.1/KlickSea-0.1.0-preview-universal.dmg), open it, and drag KlickSea into Applications. No Xcode or source build is required. This preview is locally signed, not notarized; macOS may require **System Settings → Privacy & Security → Open Anyway**. A logged-in Codex CLI or Claude Code with an API key is still required. See [installation instructions](https://klicksea-docs.vercel.app/getting-started).
+[Download the universal preview DMG](https://github.com/techsavvyash/klicksea/releases/download/v0.1.0-preview.1/KlickSea-0.1.0-preview-universal.dmg), open it, and drag KlickSea into Applications. No Xcode or source build is required. This preview is locally signed, not notarized; macOS may require **System Settings → Privacy & Security → Open Anyway**. A logged-in Codex CLI or Claude Code with an API key is still required. See [installation instructions](https://docs.klicksea.techsavvyash.dev/getting-started).
 
 ## Build and launch
 

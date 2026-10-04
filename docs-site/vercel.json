@@ -2,5 +2,18 @@
   "framework": null,
   "buildCommand": "npm run build",
   "outputDirectory": ".vitepress/dist",
-  "cleanUrls": true
+  "cleanUrls": true,
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "klicksea-docs.vercel.app"
+        }
+      ],
+      "destination": "https://docs.klicksea.techsavvyash.dev/:path*",
+      "permanent": true
+    }
+  ]
 }

@@ -1,7 +1,7 @@
 # Public websites and demo
 
-- Astro landing page: https://klicksea-web.vercel.app
-- VitePress documentation: https://klicksea-docs.vercel.app
+- Astro landing page: https://klicksea.techsavvyash.dev
+- VitePress documentation: https://docs.klicksea.techsavvyash.dev
 - Source: https://github.com/techsavvyash/klicksea
 
 Both are independent static projects deployed with the Vercel CLI under `techsavvyashs-projects`. Production aliases are public; no Vercel login is needed. Local `.vercel` project links are ignored by Git.

@@ -38,8 +38,8 @@ No Xcode, Git, source build or local signing setup is required to install.
 The full human microphone flow and installation on another Mac remain unverified.
 Captured images and transcribed questions are sent to your selected provider.
 
-Setup: https://klicksea-docs.vercel.app/getting-started
-Providers: https://klicksea-docs.vercel.app/providers
+Setup: https://docs.klicksea.techsavvyash.dev/getting-started
+Providers: https://docs.klicksea.techsavvyash.dev/providers
 Source: https://github.com/techsavvyash/klicksea
 EOF
 dmg="$PWD/dist/preview/KlickSea-$version-preview-universal.dmg"
