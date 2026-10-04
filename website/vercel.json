@@ -4,6 +4,17 @@
   "outputDirectory": "dist",
   "redirects": [
     {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "klicksea-web.vercel.app"
+        }
+      ],
+      "destination": "https://klicksea.techsavvyash.dev/",
+      "permanent": true
+    },
+    {
       "source": "/:path*",
       "has": [
         {

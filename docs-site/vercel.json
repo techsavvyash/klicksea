@@ -5,6 +5,17 @@
   "cleanUrls": true,
   "redirects": [
     {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "klicksea-docs.vercel.app"
+        }
+      ],
+      "destination": "https://docs.klicksea.techsavvyash.dev/",
+      "permanent": true
+    },
+    {
       "source": "/:path*",
       "has": [
         {
