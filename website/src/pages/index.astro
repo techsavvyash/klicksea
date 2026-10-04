@@ -1,6 +1,7 @@
 ---
 const docs = import.meta.env.PUBLIC_DOCS_URL || 'https://klicksea-docs.vercel.app';
 const repo = 'https://github.com/techsavvyash/klicksea';
+const download = repo + '/releases/download/v0.1.0-preview.1/KlickSea-0.1.0-preview-universal.dmg';
 ---
 <!doctype html>
 <html lang="en">
@@ -22,8 +23,8 @@ const repo = 'https://github.com/techsavvyash/klicksea';
       <div class="eyebrow"><span class="dot"></span>A quiet companion for your Mac</div>
       <h1>Your screen.<br /><em>A little clearer.</em></h1>
       <p class="intro">A shortcut. A question. A little help.<br />KlickSea sees what you’re looking at and talks it through with you.</p>
-      <div class="actions"><a class="primary" href={docs + '/getting-started'}>Try the developer preview <span aria-hidden="true">↗</span></a><a class="secondary" href="#demo">See how it works <span aria-hidden="true">↓</span></a></div>
-      <p class="availability">macOS 15+ · Source available · Signed public download coming next</p>
+      <div class="actions"><a class="primary" href={download}>Download the preview DMG <span aria-hidden="true">↗</span></a><a class="secondary" href="#demo">See how it works <span aria-hidden="true">↓</span></a></div>
+      <p class="availability">macOS 15+ · Apple silicon + Intel · Preview is not notarized</p>
       <div class="scene" aria-label="Illustration of the voice companion over a sample work screen">
         <div class="sample-window"><div class="window-top"><div class="window-dots"><i></i><i></i><i></i></div><span>northstar / launch notes</span><span class="sample-tag">Sample screen</span></div>
           <div class="sample-content"><aside><b>N /</b><span class="selected">Launch notes</span><span>Decisions</span><span>Ideas</span><span>Archive</span></aside>
@@ -52,7 +53,7 @@ const repo = 'https://github.com/techsavvyash/klicksea';
       </div>
     </section>
     <section class="privacy wrap"><span class="eyebrow">A companion, on your terms.</span><h2>Only when you ask.</h2><div class="privacy-grid"><p>Captures start when you invoke a shortcut or control. Dictation runs on this Mac when your language supports it. KlickSea doesn’t continuously watch your desktop.</p><p>Your captured images and transcribed question go to the provider you select. KlickSea doesn’t send microphone audio to that provider. No KlickSea analytics or cloud conversation store.</p></div><a href={docs + '/privacy'}>Read how your data is handled <span aria-hidden="true">↗</span></a></section>
-    <section class="closing wrap"><img src="/icon.png" alt="" width="56" height="56" /><h2>A little help.<br />Right where you are.</h2><p>Early, open, and getting better. Build it locally today.</p><div class="actions"><a class="primary" href={docs + '/getting-started'}>Get started <span aria-hidden="true">↗</span></a><a class="secondary" href={repo + '/releases'}>Follow releases</a></div><p class="fine">Developer ID signing and notarization are pending.<br />We haven’t published a trusted DMG yet.</p></section>
+    <section class="closing wrap"><img src="/icon.png" alt="" width="56" height="56" /><h2>A little help.<br />Right where you are.</h2><p>Early, open, and getting better. Install the preview directly.</p><div class="actions"><a class="primary" href={download}>Download for Mac <span aria-hidden="true">↗</span></a><a class="secondary" href={repo + '/releases'}>Follow releases</a></div><p class="fine">Preview uses a local development signature; macOS may require Open Anyway.<br />Developer ID signing and notarization are pending. See <a href={docs + '/getting-started'}>installation instructions</a>.</p></section>
   </main>
   <footer class="wrap"><a class="brand" href="/"><img src="/icon.png" alt="" width="28" height="28" />KlickSea</a><span>Built by <a href="https://github.com/techsavvyash">techsavvyash</a></span><div><a href={docs + '/testing'}>Testing status</a><a href={docs}>Documentation</a><a href={repo}>Source</a></div></footer>
 </body>

@@ -1,14 +1,24 @@
 # Getting started
 
-KlickSea is an early native macOS companion. A trusted public DMG is pending; developers can build locally.
+KlickSea is an early native macOS companion. Install the preview DMG without building from source. Apple Developer ID signing and notarization are pending.
+
+## Install the preview
+
+1. [Download the preview DMG](https://github.com/techsavvyash/klicksea/releases/download/v0.1.0-preview.1/KlickSea-0.1.0-preview-universal.dmg).
+2. Open it and drag **KlickSea** into **Applications**. Open KlickSea from Applications.
+3. This preview uses a local development signature and is **not notarized**. If macOS blocks opening, go to **System Settings → Privacy & Security → Open Anyway** for KlickSea and confirm Open. Leave Gatekeeper enabled.
+4. Install/configure your [provider](/providers), then follow “First conversation” below.
+
+No Xcode, Git, source build, or certificate setup is needed to install. The DMG includes Apple silicon and Intel binaries; runtime testing has been on Apple silicon. Installation on another Mac and the complete human microphone flow still need validation. [Testing status](/testing).
 
 ## Requirements
 
 - macOS 15 or later; current tested host is Apple silicon.
-- Xcode for building and XCTest.
 - Codex CLI with its existing login, or Claude Code CLI plus an Anthropic API key.
 
 ## Build locally
+
+For contributors only: install Xcode first. App users can use the DMG above.
 
 ```sh
 git clone https://github.com/techsavvyash/klicksea.git

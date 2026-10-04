@@ -18,7 +18,7 @@ Last reviewed: 2026-10-04. This is an early macOS companion, not a fully validat
 - Claude API execution with a real key and account.
 - Multi-monitor selection, permission denial/recovery, language variation, and the complete manual acceptance checklist.
 - A Developer ID-signed, notarized DMG and a downloaded installation on another Mac.
-- Intel/universal distribution. Current local builds target Apple silicon.
+- Intel runtime testing. The preview DMG includes compiled Apple silicon and Intel binaries; runtime testing has been on Apple silicon.
 
 Run `DEVELOPER_DIR=/Applications/Xcode.app/Contents/Developer swift test` for automated tests. Use the signed bundle for hardware/privacy checks; `swift run` has a different permission identity. See [the manual checklist](ACCEPTANCE.md) and [signing instructions](SIGNING.md).
 

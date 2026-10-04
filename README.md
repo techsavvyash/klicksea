@@ -4,6 +4,10 @@ A native macOS 15+ menu-bar companion: capture the display under your pointer, a
 
 Website: [klicksea-web.vercel.app](https://klicksea-web.vercel.app) · Docs: [klicksea-docs.vercel.app](https://klicksea-docs.vercel.app) · [Working demo](https://klicksea-web.vercel.app/#demo)
 
+## Install the preview
+
+[Download the universal preview DMG](https://github.com/techsavvyash/klicksea/releases/download/v0.1.0-preview.1/KlickSea-0.1.0-preview-universal.dmg), open it, and drag KlickSea into Applications. No Xcode or source build is required. This preview is locally signed, not notarized; macOS may require **System Settings → Privacy & Security → Open Anyway**. A logged-in Codex CLI or Claude Code with an API key is still required. See [installation instructions](https://klicksea-docs.vercel.app/getting-started).
+
 ## Build and launch
 
 Install Xcode or Apple's Command Line Tools (`xcode-select --install`). The Swift package can also be opened in Xcode. Use the bundled app for permission testing, **not `swift run`**.
