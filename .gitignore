@@ -21,3 +21,4 @@ node_modules/
 *.csr
 *.pem
 design-qa.md
+.build-release/

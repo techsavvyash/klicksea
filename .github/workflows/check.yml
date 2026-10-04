@@ -1,0 +1,31 @@
+name: Checks
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  native:
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Native tests
+        run: swift test
+      - name: Script and plist checks
+        run: |
+          bash -n scripts/*.sh
+          plutil -lint Resources/Info.plist Resources/KlickSea.entitlements
+  websites:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        directory: [website, docs-site]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: '${{ matrix.directory }}/package-lock.json'
+      - run: npm ci
+        working-directory: '${{ matrix.directory }}'
+      - run: npm run build
+        working-directory: '${{ matrix.directory }}'

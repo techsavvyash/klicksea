@@ -2,6 +2,8 @@
 
 A native macOS 15+ menu-bar companion: capture the display under your pointer, ask a question aloud, and hear the answer. SwiftUI, ScreenCaptureKit, Speech, and AVFoundation; no Python, Node bridge, server, or third-party app libraries.
 
+Website: [klicksea-web.vercel.app](https://klicksea-web.vercel.app) · Docs: [klicksea-docs.vercel.app](https://klicksea-docs.vercel.app) · [Working demo](https://klicksea-web.vercel.app/#demo)
+
 ## Build and launch
 
 Install Xcode or Apple's Command Line Tools (`xcode-select --install`). The Swift package can also be opened in Xcode. Use the bundled app for permission testing, **not `swift run`**.
@@ -62,6 +64,10 @@ bash -n scripts/build-app.sh scripts/notarize.sh
 ```
 
 Tests cover multimodal payloads, final result parsing, bounded clip sampling, process output, and timeout. See [manual acceptance checks](docs/ACCEPTANCE.md) for permission and hardware-dependent workflows. Live capture, microphone, paid provider requests, signed updates, and notarization need local approval/credentials and are not established by compilation alone.
+
+## Release and websites
+
+[Developer ID and notarized DMG setup](docs/RELEASE.md) · [Website deployment and demo notes](docs/WEBSITES.md)
 
 ## References
 

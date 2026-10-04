@@ -1,0 +1,13 @@
+WEBVTT
+
+00:00:02.800 --> 00:00:06.500
+What is blocking this launch, and what should I fix first?
+
+00:00:17.400 --> 00:00:24.800
+The checklist says trusted downloads are blocked because the app still needs a Developer ID Application certificate and notarization.
+
+00:00:24.800 --> 00:00:32.200
+Fix signing and notarization first, then test the downloaded app on another Mac before public release.
+
+00:00:32.200 --> 00:00:35.300
+The native build and documentation are marked complete.

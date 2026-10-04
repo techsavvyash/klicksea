@@ -20,6 +20,6 @@ Last reviewed: 2026-10-04. This is an early macOS companion, not a fully validat
 - A Developer ID-signed, notarized DMG and a downloaded installation on another Mac.
 - Intel/universal distribution. Current local builds target Apple silicon.
 
-Run `DEVELOPER_DIR=/Applications/Xcode.app/Contents/Developer swift test` for automated tests. Use the signed bundle for hardware/privacy checks; `swift run` has a different permission identity. See [the manual checklist](ACCEPTANCE.md) and [signing instructions](SIGNING.md).
+Run `DEVELOPER_DIR=/Applications/Xcode.app/Contents/Developer swift test` for automated tests. Use the signed bundle for hardware/privacy checks; `swift run` has a different permission identity. See [the manual checklist](https://github.com/techsavvyash/klicksea/blob/main/docs/ACCEPTANCE.md) and [signing instructions](https://github.com/techsavvyash/klicksea/blob/main/docs/SIGNING.md).
 
 Private diagnostic reports and real screen captures are excluded from the public repository. A successful build does not establish end-to-end behavior or notarization.

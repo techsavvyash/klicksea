@@ -4,6 +4,7 @@ import ScreenCaptureKit
 
 @MainActor
 final class CaptureService: NSObject, SCRecordingOutputDelegate {
+    var demoTargetPID: pid_t?
     private var stream: SCStream?
     private var recordingOutput: SCRecordingOutput?
     private var movie: URL?
@@ -23,7 +24,14 @@ final class CaptureService: NSObject, SCRecordingOutputDelegate {
             throw AppFailure("No display is available to capture.")
         }
         let ownApps = content.applications.filter { $0.processID == ProcessInfo.processInfo.processIdentifier }
-        let filter = SCContentFilter(display: display, excludingApplications: ownApps, exceptingWindows: [])
+        let filter: SCContentFilter
+        if let demoTargetPID {
+            let windows = content.windows.filter { $0.owningApplication?.processID == demoTargetPID }
+            guard !windows.isEmpty else { throw AppFailure("Demo sample window is unavailable.") }
+            filter = SCContentFilter(display: display, including: windows)
+        } else {
+            filter = SCContentFilter(display: display, excludingApplications: ownApps, exceptingWindows: [])
+        }
         let config = SCStreamConfiguration()
         let scale = min(1.0, 2048.0 / Double(max(display.width, display.height)))
         config.width = Int(Double(display.width) * scale) / 2 * 2

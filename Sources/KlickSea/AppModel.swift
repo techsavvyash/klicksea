@@ -50,7 +50,7 @@ final class AppModel: ObservableObject {
         }
     }
 
-    func begin(record: Bool) {
+    func begin(record: Bool, dictate: Bool? = nil) {
         guard !busy, !cancelling else { return }
         if recording { stopRecording(); return }
         if !record && !images.isEmpty && listening { send(); return }
@@ -84,7 +84,7 @@ final class AppModel: ObservableObject {
                 }
                 busy = false
                 showWindow?()
-                if UserDefaults.standard.object(forKey: "autoDictate") as? Bool ?? true { toggleDictation() }
+                if dictate ?? (UserDefaults.standard.object(forKey: "autoDictate") as? Bool ?? true) { toggleDictation() }
             } catch is CancellationError {
                 // Cancellation owns cleanup after this operation unwinds.
             } catch {

@@ -94,6 +94,10 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
                 DispatchQueue.main.async { NSApp.terminate(nil) }
             }
         }
+        if let index = args.firstIndex(of: "--record-demo"), args.indices.contains(index + 3), let target = Int32(args[index + 1]) {
+            Task { await DemoRecording.run(model: model, target: target,
+                movie: URL(fileURLWithPath: args[index + 2]), report: URL(fileURLWithPath: args[index + 3])) }
+        }
         if let index = args.firstIndex(of: "--local-test"), args.indices.contains(index + 1) {
             model.runLocalTests(report: URL(fileURLWithPath: args[index + 1]))
         }
